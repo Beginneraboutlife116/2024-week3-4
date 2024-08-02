@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+// also, we could add any specific utilities in here, such as `.section` for different padding block.
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+@each $size-name, $size-value in $sizes {
+  .m {
+    &-#{$size-name} {
+      margin: $size-value;
+    }
+    &y-start-#{$size-name} {
+      margin-block-start: $size-value;
+    }
+    &y-end-#{$size-name} {
+      margin-block-end: $size-value;
+    }
+    &y-#{$size-name} {
+      margin-block: $size-value;
+    }
+    &x-start-#{$size-name} {
+      margin-inline-start: $size-value;
+    }
+    &x-end-#{$size-name} {
+      margin-inline-end: $size-value;
+    }
+    &x-#{$size-name} {
+      margin-inline: $size-value;
+    }
+  }
+  .p {
+    &-#{$size-name} {
+      padding: $size-value;
+    }
+    &y-start-#{$size-name} {
+      padding-block-start: $size-value;
+    }
+    &y-end-#{$size-name} {
+      padding-block-end: $size-value;
+    }
+    &y-#{$size-name} {
+      padding-block: $size-value;
+    }
+    &x-start-#{$size-name} {
+      padding-inline-start: $size-value;
+    }
+    &x-end-#{$size-name} {
+      padding-inline-end: $size-value;
+    }
+    &x-#{$size-name} {
+      padding-inline: $size-value;
+    }
+  }
+}
