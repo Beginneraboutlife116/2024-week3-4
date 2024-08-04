@@ -3,6 +3,22 @@
 .header {
   padding-block: rem(16);
 
+  @include mq-for-above("mobile") {
+    font-size: rem(20);
+  }
+
+  @include mq-for-below("mobile") {
+    padding-block-end: 0;
+
+    &__logo {
+      padding: 0 0 rem(15) rem(15);
+    }
+
+    > .container {
+      max-inline-size: none;
+    }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -46,22 +62,6 @@
           border-inline-end: none;
         }
       }
-    }
-  }
-
-  @include mq-for-above("mobile") {
-    font-size: rem(20);
-  }
-
-  @include mq-for-below("mobile") {
-    padding-block-end: 0;
-
-    &__logo {
-      padding: 0 0 rem(15) rem(15);
-    }
-
-    > .container {
-      max-inline-size: none;
     }
   }
 }
