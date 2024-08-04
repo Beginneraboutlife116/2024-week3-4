@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.container {
+  max-inline-size: map.get($container-max-inline-size, "desktop");
+  margin-inline: auto;
+
+  @include mq-for-below("tablet") {
+    max-inline-size: map.get($container-max-inline-size, "tablet");
+  }
+
+  @include mq-for-below("mobile") {
+    max-inline-size: map.get($container-max-inline-size, "mobile");
+  }
+}

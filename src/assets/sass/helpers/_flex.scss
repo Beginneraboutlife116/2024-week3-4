@@ -1,0 +1,9 @@
+@use "../abstracts/" as *;
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}

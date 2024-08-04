@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+
+.header {
+  padding-block: rem(16);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq-for-below("mobile") {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .nav {
+    li + li {
+      margin-inline-start: rem(64);
+    }
+
+    @include mq-for-below("mobile") {
+      a {
+        display: block;
+        padding-block: rem(12);
+        border: 1px solid clr(neutral, 100);
+        text-align: center;
+
+        &:hover {
+          background-color: clr(primary, 700);
+        }
+      }
+
+      ul {
+        flex-wrap: wrap;
+      }
+
+      li {
+        inline-size: 50%;
+
+        & + li {
+          margin-inline-start: 0;
+        }
+
+        &:nth-child(odd) a {
+          border-inline-end: none;
+        }
+      }
+    }
+  }
+
+  @include mq-for-above("mobile") {
+    font-size: rem(20);
+  }
+
+  @include mq-for-below("mobile") {
+    padding-block-end: 0;
+
+    &__logo {
+      padding: 0 0 rem(15) rem(15);
+    }
+
+    > .container {
+      max-inline-size: none;
+    }
+  }
+}

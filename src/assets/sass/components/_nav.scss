@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.nav {
+  ul {
+    display: flex;
+  }
+
+  li + li {
+    margin-inline-start: rem(48);
+
+    @include mq-for-below("mobile") {
+      margin-inline-start: rem(25);
+    }
+  }
+}

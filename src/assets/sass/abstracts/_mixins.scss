@@ -1,0 +1,42 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+
+@mixin mq-for-above($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map.get($breakpoints, $breakpoint);
+    @media (min-width: calc($breakpoint-value + 1px)) {
+      @content;
+    }
+  } @else if meta.type-of($breakpoint) == number {
+    @if math.is-unitless($breakpoint) {
+      @error 'when using a number with @for-above() make sure to include a unit';
+    } @else {
+      @media (min-width: calc($breakpoint-value + 1px)) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$breakpoint} is not in the $breakpoints map';
+  }
+}
+
+@mixin mq-for-below($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map.get($breakpoints, $breakpoint);
+    @media screen and (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else if meta.type-of($breakpoint) == number {
+    @if math.is-unitless($breakpoint) {
+      @error 'when using a number with @for-above() make sure to include a unit';
+    } @else {
+      @media screen and (max-width: $breakpoint) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$breakpoint} is not in the $breakpoints map';
+  }
+}

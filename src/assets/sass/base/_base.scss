@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+body {
+  line-height: 1.5;
+  font-family: $ff-notoSansTC;
+}
+
+a {
+  color: clr(neutral, 100);
+  text-decoration: none;
+  cursor: pointer;
+}

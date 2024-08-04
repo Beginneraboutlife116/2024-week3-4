@@ -1,17 +1,20 @@
 import { NavLink } from "react-router-dom";
 
-import LogoPng1x from "../../assets/images/logo/logo-1x.png";
-import LogoPng2x from "../../assets/images/logo/logo-2x.png";
+import { Logo1xPng, Logo2xPng } from "assets-images/logo";
 
 export default function Header() {
   return (
-    <header>
-      <div className="logo">
-        <picture>
-          <source srcSet={`${LogoPng1x} 1x, ${LogoPng2x} 2x`} />
-          <img alt="logo" src={LogoPng1x} />
-        </picture>
-        <nav>
+    <header className="bg-primary-400 | header">
+      <div className="container | header__container">
+        <div className="header__logo">
+          <img
+            alt="logo"
+            src={Logo1xPng}
+            srcSet={`${Logo2xPng} 2x, ${Logo1xPng} 1x`}
+            width={80}
+          />
+        </div>
+        <nav className="nav">
           <ul>
             <li>
               <NavLink>系列鏡框</NavLink>
