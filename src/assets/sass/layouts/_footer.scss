@@ -54,20 +54,19 @@
       margin-block-start: rem(8);
     }
 
-    img {
-      inline-size: rem(48);
-      margin-inline-end: rem(16);
-    }
-
     @include mq-for-above("mobile") {
       font-size: rem(36);
+
+      img {
+        inline-size: rem(48);
+        margin-inline-end: rem(16);
+      }
     }
 
     @include mq-for-below("mobile") {
       grid-row: 1;
 
       img {
-        inline-size: rem(24);
         margin-inline-end: rem(8);
       }
     }
