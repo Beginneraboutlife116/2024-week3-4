@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+@each $size-name, $size-value in $sizes {
+  .rounded {
+    &-#{$size-name} {
+      border-radius: $size-value;
+    }
+    &-top-#{$size-name} {
+      border-top-left-radius: $size-value;
+      border-top-right-radius: $size-value;
+    }
+    &-bottom-#{$size-name} {
+      border-bottom-left-radius: $size-value;
+      border-bottom-right-radius: $size-value;
+    }
+    &-left-#{$size-name} {
+      border-top-left-radius: $size-value;
+      border-bottom-left-radius: $size-value;
+    }
+    &-right-#{$size-name} {
+      border-top-right-radius: $size-value;
+      border-bottom-right-radius: $size-value;
+    }
+  }
+}

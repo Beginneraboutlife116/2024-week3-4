@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+@each $size-name, $size-value in $font-sizes {
+  .fz-#{$size-name} {
+    font-size: $size-value;
+  }
+}
+
+@each $weight-name, $weight-value in $font-weights {
+  .fw-#{$weight-name} {
+    font-weight: $weight-value;
+  }
+}
+
+.font-roboto {
+  font-family: $ff-roboto;
+}
+
+.font-style-italic {
+  font-style: italic;
+}

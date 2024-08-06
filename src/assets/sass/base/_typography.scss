@@ -1,15 +1,38 @@
 @use "../abstracts/" as *;
 
+// Noto Sans TC
 @font-face {
   font-family: "Noto Sans TC";
   src: url("assets/fonts/noto-sans-ts/regular.ttf") format("truetype");
-  font-weight: $fw-400;
+  font-weight: fw("regular");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("assets/fonts/noto-sans-ts/medium.ttf") format("truetype");
+  font-weight: fw("medium");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  src: url("assets/fonts/noto-sans-ts/bold.ttf") format("truetype");
+  font-weight: fw("bold");
+  font-display: swap;
+}
+
+// Roboto
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/roboto/regular.ttf") format("truetype");
+  font-weight: fw("regular");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("assets/fonts/roboto/regular.ttf") format("truetype");
-  font-weight: $fw-400;
+  src: url("assets/fonts/roboto/black.ttf") format("truetype");
+  font-weight: fw("black");
   font-display: swap;
 }

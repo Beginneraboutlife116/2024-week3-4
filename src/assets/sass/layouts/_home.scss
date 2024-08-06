@@ -1,0 +1,190 @@
+@use "../abstracts/" as *;
+
+.home {
+  &__banner {
+    min-height: rem(787);
+    background-image: url("assets/images/banner/banner.png");
+    background-size: cover;
+    background-position: center;
+
+    @include mq-for-below("tablet") {
+      background-image: url("assets/images/banner/banner-sm.png");
+    }
+
+    @include mq-for-below("mobile") {
+      min-height: rem(396);
+    }
+
+    &-container {
+      padding-block-start: rem(216);
+
+      > em {
+        font-size: rem(64);
+      }
+
+      @include mq-for-above("mobile") {
+        > h1 {
+          font-size: rem(36);
+        }
+      }
+
+      @include mq-for-below("mobile") {
+        padding-block-start: rem(104);
+
+        > h1 {
+          font-size: rem(16);
+        }
+
+        > em {
+          font-size: rem(24);
+        }
+      }
+    }
+
+    a {
+      inline-size: fit-content;
+      padding: rem(6) rem(12);
+
+      &:hover {
+        background-color: clr(primary, 700);
+      }
+    }
+  }
+
+  &__products {
+    h3 {
+      margin-block-end: rem(48);
+
+      @include mq-for-below("mobile") {
+        margin-block-end: rem(24);
+      }
+    }
+
+    ul {
+      li + li {
+        margin-inline-start: rem(24);
+      }
+
+      @include mq-for-below("tablet") {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+          max-inline-size: rem(336);
+
+          & + li {
+            margin: rem(24) 0 0;
+          }
+        }
+      }
+
+      @include mq-for-below("mobile") {
+        li {
+          max-inline-size: none;
+        }
+      }
+    }
+
+    &--background {
+      background-image: url("assets-images/products/model--red-lg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include mq-for-below("tablet") {
+        background-image: url("assets-images/products/model--red-md.png");
+      }
+
+      @include mq-for-below("mobile") {
+        background-image: url("assets-images/products/model--red-sm.png");
+        background-position: center;
+      }
+
+      ul {
+        li + li {
+          margin-inline-start: 0;
+        }
+
+        @include mq-for-below("tablet") {
+          li {
+            max-inline-size: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__form-container {
+    @include mq-for-above("mobile") {
+      max-inline-size: rem(576);
+      margin-inline: auto;
+    }
+
+    @include mq-for-above("tablet") {
+      max-inline-size: 50%;
+    }
+
+    .title {
+      margin-block-end: rem(48);
+
+      @include mq-for-below("mobile") {
+        margin-block-end: rem(24);
+      }
+    }
+
+    .button {
+      max-inline-size: rem(416);
+      margin-block-start: rem(48);
+
+      @include mq-for-below("tablet") {
+        max-inline-size: rem(336);
+      }
+
+      @include mq-for-below("mobile") {
+        max-inline-size: 100%;
+        margin-block-start: rem(24);
+      }
+    }
+
+    input,
+    textarea {
+      background-color: transparent;
+      padding: rem(6) rem(12);
+      border: 1px solid clr(neutral, 900);
+    }
+
+    textarea {
+      min-block-size: rem(136);
+    }
+
+    p {
+      @include mq-for-above("tablet") {
+        font-size: rem(20);
+      }
+    }
+
+    input[type="checkbox"] {
+      + label {
+        display: flex;
+
+        &::before {
+          content: url("assets/images/icons/checkbox.svg");
+          inline-size: rem(24);
+          block-size: rem(24);
+          margin-inline-end: rem(4);
+        }
+      }
+
+      &:checked + label::before {
+        content: url("assets/images/icons/checkbox-checked.svg");
+      }
+    }
+  }
+
+  section {
+    padding-block: rem(80);
+
+    @include mq-for-below("mobile") {
+      padding-block: rem(40);
+    }
+  }
+}

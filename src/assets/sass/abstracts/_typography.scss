@@ -2,12 +2,15 @@ $ff-notoSansTC: "Noto Sans TC", sans-serif;
 $ff-roboto: "Roboto", sans-serif;
 
 $font-sizes: (
-  900: 3.75rem,
-  800: 3rem,
-  600: 1.5rem,
-  500: 1.3125rem,
+  300: 0.875rem,
   400: 1.25rem,
+  500: 1.5rem,
+  600: 3rem,
 );
 
-$fw-400: 400;
-$fw-700: 700;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900,
+);

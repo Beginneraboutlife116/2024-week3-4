@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.card {
+  --card-min-block-size: #{rem(511)};
+
+  min-block-size: var(--card-min-block-size);
+}

@@ -2,6 +2,7 @@ $colors: (
   neutral: (
     100: #fff,
     200: #fbf2f2,
+    600: #707070,
     900: #000,
   ),
   primary: (
@@ -9,3 +10,5 @@ $colors: (
     700: #650300,
   ),
 );
+
+$box-shadow: 0px 2px 6px #00000029;

@@ -1,9 +1,29 @@
 @use "../abstracts/" as *;
 
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
 .justify-content-between {
   justify-content: space-between;
 }
 
+.justify-content-end {
+  justify-content: flex-end;
+}
+
 .align-items-center {
   align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
 }

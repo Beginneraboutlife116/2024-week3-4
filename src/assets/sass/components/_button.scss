@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.button {
+  padding-block: rem(16);
+  cursor: pointer;
+}

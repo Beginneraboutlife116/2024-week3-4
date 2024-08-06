@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.grid-columns {
+  --grid-columns-gap: #{rem(24)};
+  --grid-column-min-inline-size: #{rem(306)};
+  --grid-column-img-min-inline-size: #{rem(100)};
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--grid-column-min-inline-size), 100%), 1fr)
+  );
+  gap: var(--grid-columns-gap);
+
+  img {
+    min-inline-size: var(--grid-column-img-min-inline-size);
+  }
+}
