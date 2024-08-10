@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+
+.pagination {
+  inline-size: fit-content;
+  margin-inline: auto;
+
+  > * {
+    background-color: clr(neutral, 100);
+    padding: rem(12);
+    border: 1px solid clr(neutral, 600);
+    cursor: pointer;
+
+    @include mq-for-above("mobile") {
+      font-size: rem(18);
+    }
+
+    @include mq-for-above("tablet") {
+      font-size: rem(19);
+    }
+
+    &:hover {
+      background-color: clr(neutral, 300);
+    }
+
+    &.active {
+      background-color: clr(neutral, 900);
+      color: clr(neutral, 100);
+    }
+  }
+}

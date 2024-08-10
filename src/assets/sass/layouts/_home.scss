@@ -113,6 +113,16 @@
     }
   }
 
+  &__recommend {
+    h3 {
+      margin-block-end: rem(48);
+
+      @include mq-for-below("mobile") {
+        margin-block-end: rem(24);
+      }
+    }
+  }
+
   &__form-container {
     @include mq-for-above("mobile") {
       max-inline-size: rem(576);
@@ -177,14 +187,6 @@
       &:checked + label::before {
         content: url("assets/images/icons/checkbox-checked.svg");
       }
-    }
-  }
-
-  section {
-    padding-block: rem(80);
-
-    @include mq-for-below("mobile") {
-      padding-block: rem(40);
     }
   }
 }

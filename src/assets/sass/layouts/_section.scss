@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.section {
+  padding-block: rem(80);
+
+  @include mq-for-below("mobile") {
+    padding-block: rem(40);
+  }
+}

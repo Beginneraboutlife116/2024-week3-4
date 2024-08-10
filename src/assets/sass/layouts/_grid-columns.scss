@@ -1,7 +1,8 @@
 @use "../abstracts/" as *;
 
 .grid-columns {
-  --grid-columns-gap: #{rem(24)};
+  --grid-columns-gap-column: #{rem(24)};
+  --grid-columns-gap-row: #{rem(24)};
   --grid-column-min-inline-size: #{rem(306)};
   --grid-column-img-min-inline-size: #{rem(100)};
 
@@ -10,9 +11,15 @@
     auto-fit,
     minmax(min(var(--grid-column-min-inline-size), 100%), 1fr)
   );
-  gap: var(--grid-columns-gap);
+  gap: var(--grid-columns-gap-row) var(--grid-columns-gap-column);
 
   img {
     min-inline-size: var(--grid-column-img-min-inline-size);
+  }
+
+  &[data-category="sunglasses"] {
+    @include mq-for-above("tablet") {
+      --grid-column-min-inline-size: #{rem(416)};
+    }
   }
 }

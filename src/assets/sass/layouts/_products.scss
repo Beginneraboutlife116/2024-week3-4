@@ -1,0 +1,138 @@
+@use "../abstracts/" as *;
+
+.products {
+  &__nav.container {
+    @include mq-for-below("tablet") {
+      max-inline-size: none;
+    }
+
+    a {
+      display: block;
+      padding-block: rem(16);
+      font-size: rem(16);
+      border: 1px solid clr(neutral, 400);
+
+      @include mq-for-above("mobile") {
+        font-size: rem(24);
+      }
+
+      @include mq-for-above("tablet") {
+        padding-block: rem(24);
+        font-size: rem(32);
+      }
+
+      + a {
+        border-inline-start: none;
+      }
+
+      &:hover {
+        background-color: clr(neutral, 300);
+      }
+
+      &.active {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          block-size: rem(8);
+          background-color: clr(primary, 400);
+          inset: auto -1px 0;
+        }
+      }
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    min-block-size: rem(296);
+
+    @include mq-for-below("mobile") {
+      min-block-size: rem(136);
+    }
+
+    > * {
+      flex: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &--optical {
+      &:first-child {
+        background-image: url("assets-images/products/optical-header-1-sm.png");
+      }
+
+      &:last-child {
+        background-image: url("assets-images/products/optical-header-2-sm.png");
+      }
+
+      @include mq-for-above("tablet") {
+        &:first-child {
+          background-image: url("assets-images/products/optical-header-1.png");
+        }
+
+        &:last-child {
+          background-image: url("assets-images/products/optical-header-2.png");
+        }
+      }
+    }
+
+    &--sunglasses {
+      &:first-child {
+        background-image: url("assets-images/products/sunglasses-header-1-sm.png");
+      }
+
+      &:last-child {
+        background-image: url("assets-images/products/sunglasses-header-2-sm.png");
+      }
+
+      @include mq-for-above("tablet") {
+        &:first-child {
+          background-image: url("assets-images/products/sunglasses-header-1.png");
+        }
+
+        &:last-child {
+          background-image: url("assets-images/products/sunglasses-header-2.png");
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding-block-end: rem(32);
+    font-size: rem(32);
+
+    @include mq-for-below("mobile") {
+      padding-block-end: rem(24);
+      font-size: rem(24);
+    }
+
+    h1 {
+      font-size: rem(42);
+
+      @include mq-for-below("mobile") {
+        font-size: rem(24);
+      }
+    }
+  }
+
+  &__color-button {
+    max-inline-size: rem(24);
+    block-size: rem(24);
+    overflow: clip;
+    cursor: pointer;
+
+    + * {
+      margin-inline-start: rem(8);
+    }
+  }
+
+  .pagination {
+    margin-block-start: rem(80);
+
+    @include mq-for-below("mobile") {
+      margin-block: rem(64) rem(24);
+    }
+  }
+}

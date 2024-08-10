@@ -32,6 +32,13 @@
 
 @font-face {
   font-family: "Roboto";
+  src: url("assets/fonts/roboto/medium.ttf") format("truetype");
+  font-weight: fw("medium");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
   src: url("assets/fonts/roboto/black.ttf") format("truetype");
   font-weight: fw("black");
   font-display: swap;

@@ -28,12 +28,14 @@ export default function Home() {
             <em>Promise-Desert 2020 早春系列</em>
           </h1>
           <em className="fw-bold">看得清，才能看得遠</em>
-          <NavLink className="bg-primary-400 mx-start-auto fz-400 fw-medium">
+          <NavLink
+            to="/products/optical"
+            className="bg-primary-400 mx-start-auto fz-400 fw-medium">
             立即購買
           </NavLink>
         </div>
       </section>
-      <section className="bg-neutral-200">
+      <section className="bg-neutral-200 section">
         <div className="container">
           <h2 className="clr-primary-700 text-align-center my-end-6 title">
             用專業的心，做專業的事
@@ -76,13 +78,13 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section className="container | home__products">
+      <section className="container section | home__products">
         <h3 className="title clr-primary-700 text-align-center">
           經典系列鏡框
         </h3>
         <ul className="d-flex font-roboto">
           <li>
-            <NavLink>
+            <NavLink to="/products/optical">
               <img src={ModelBlackWhitePng1} alt="optical" />
               <h4 className="clr-primary-400 fz-600 bg-neutral-100 py-2 text-align-center font-style-italic">
                 OPTICAL
@@ -90,7 +92,7 @@ export default function Home() {
             </NavLink>
           </li>
           <li>
-            <NavLink>
+            <NavLink to="/products/sunglasses">
               <img src={ModelBlackWhitePng2} alt="sunglasses" />
               <h4 className="clr-primary-400 fz-600 bg-neutral-100 py-2 text-align-center font-style-italic">
                 SUNGLASSES
@@ -98,7 +100,7 @@ export default function Home() {
             </NavLink>
           </li>
           <li>
-            <NavLink>
+            <NavLink to="/products/functional">
               <img src={ModelBlackWhitePng3} alt="functional" />
               <h4 className="clr-primary-400 fz-600 bg-neutral-100 py-2 text-align-center font-style-italic">
                 FUNCTIONAL
@@ -107,14 +109,14 @@ export default function Home() {
           </li>
         </ul>
       </section>
-      <section className="home__products home__products--background">
+      <section className="section | home__products home__products--background">
         <div className="container">
           <h3 className="title clr-neutral-100 text-align-center">
             聯名設計鏡框
           </h3>
           <ul className="d-flex font-roboto">
             <li>
-              <NavLink>
+              <NavLink to="/products/double-a">
                 <img
                   srcSet={`${ModelAlliancePngSM} 696w, ${ModelAlliancePng} 1296w`}
                   sizes="(max-width: 600px) 696px, 1296px"
@@ -127,7 +129,7 @@ export default function Home() {
               </NavLink>
             </li>
             <li>
-              <NavLink>
+              <NavLink to="/products/youth">
                 <img
                   srcSet={`${ProductAlliancePngSM} 696w, ${ProductAlliancePng} 1296w`}
                   sizes="(max-width: 600px) 696px, 1296px"
@@ -142,7 +144,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section>
+      <section className="section | home__recommend">
         <div className="container">
           <h3 className="title clr-primary-700 text-align-center">顧客推薦</h3>
           <section className="grid-columns">
@@ -191,7 +193,7 @@ export default function Home() {
           </section>
         </div>
       </section>
-      <section className="bg-neutral-200">
+      <section className="bg-neutral-200 section">
         <div className="container">
           <div className="home__form-container">
             <h3 className="title clr-primary-700 text-align-center">
