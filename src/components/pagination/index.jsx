@@ -1,15 +1,31 @@
+import { NavLink } from "react-router-dom";
+
 export default function Pagination() {
   return (
-    <div className="pagination">
-      <button type="button">上一頁</button>
-      <button type="button">1</button>
-      <button type="button" className="active">
-        2
-      </button>
-      <button type="button">3</button>
-      <button type="button">4</button>
-      <button type="button">5</button>
-      <button type="button">下一頁</button>
-    </div>
+    <ul className="pagination">
+      <li>
+        <NavLink to="/">上一頁</NavLink>
+      </li>
+      <li>
+        <NavLink to="/">1</NavLink>
+      </li>
+      <li>
+        <NavLink to="/" className="active">
+          2
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/">3</NavLink>
+      </li>
+      <li>
+        <NavLink to="/">4</NavLink>
+      </li>
+      <li>
+        <NavLink to="/">5</NavLink>
+      </li>
+      <li>
+        <NavLink to="/">下一頁</NavLink>
+      </li>
+    </ul>
   );
 }

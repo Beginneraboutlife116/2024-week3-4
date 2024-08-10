@@ -1,14 +1,16 @@
 @use "../abstracts/" as *;
 
 .pagination {
+  display: flex;
   inline-size: fit-content;
   margin-inline: auto;
 
-  > * {
-    background-color: clr(neutral, 100);
+  a {
+    display: inline-block;
+    min-inline-size: rem(42);
     padding: rem(12);
     border: 1px solid clr(neutral, 600);
-    cursor: pointer;
+    text-align: center;
 
     @include mq-for-above("mobile") {
       font-size: rem(18);
@@ -24,7 +26,10 @@
 
     &.active {
       background-color: clr(neutral, 900);
-      color: clr(neutral, 100);
+    }
+
+    &:not(.active) {
+      color: clr(neutral, 800);
     }
   }
 }
