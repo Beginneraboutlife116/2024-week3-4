@@ -8,8 +8,10 @@ import ErrorPage from "./pages/error-page";
 import Layout from "./layout";
 import Home from "./pages/home";
 import Products from "./pages/products";
+import Locations from "./pages/locations";
 
 import { loader as productsLoader } from "./pages/products/utils";
+import { loader as locationsLoader } from "./pages/locations/utils";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,15 @@ const router = createBrowserRouter([
             path: "/products/:category",
             element: <Products />,
             loader: productsLoader,
+          },
+          {
+            path: "/locations",
+            element: <Locations />,
+            loader: locationsLoader,
+          },
+          {
+            path: "/locations/:locationId",
+            element: <div>Hi</div>,
           },
         ],
       },

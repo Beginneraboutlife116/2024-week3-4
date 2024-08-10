@@ -3,23 +3,23 @@
 .grid-columns {
   --grid-columns-gap-column: #{rem(24)};
   --grid-columns-gap-row: #{rem(24)};
-  --grid-column-min-inline-size: #{rem(306)};
-  --grid-column-img-min-inline-size: #{rem(100)};
+  --grid-columns-min-inline-size: #{rem(306)};
+  --grid-columns-img-min-inline-size: #{rem(100)};
 
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--grid-column-min-inline-size), 100%), 1fr)
+    minmax(min(var(--grid-columns-min-inline-size), 100%), 1fr)
   );
   gap: var(--grid-columns-gap-row) var(--grid-columns-gap-column);
 
   img {
-    min-inline-size: var(--grid-column-img-min-inline-size);
+    min-inline-size: var(--grid-columns-img-min-inline-size);
   }
 
   &[data-category="sunglasses"] {
     @include mq-for-above("tablet") {
-      --grid-column-min-inline-size: #{rem(416)};
+      --grid-columns-min-inline-size: #{rem(416)};
     }
   }
 }

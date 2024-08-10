@@ -3,5 +3,6 @@
 .card {
   --card-min-block-size: #{rem(511)};
 
+  max-inline-size: var(--card-max-inline-size, auto);
   min-block-size: var(--card-min-block-size);
 }
