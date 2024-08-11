@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import { FBPng, IGPng, LinePng } from "assets-images/social-media";
 import { CallSvg, MailSvg } from "assets-images/icons";
 
-const { BASE_URL } = import.meta.env;
-
 export default function Footer() {
   return (
     <footer className="bg-primary-400 clr-neutral-100 | footer">
@@ -12,13 +10,13 @@ export default function Footer() {
         <nav className="nav">
           <ul>
             <li>
-              <NavLink to={BASE_URL}>首頁</NavLink>
+              <NavLink to="/">首頁</NavLink>
             </li>
             <li>
-              <NavLink to={`${BASE_URL}products/optical`}>系列鏡框</NavLink>
+              <NavLink to="/products/optical">系列鏡框</NavLink>
             </li>
             <li>
-              <NavLink to={`${BASE_URL}stores`}>門市據點</NavLink>
+              <NavLink to="/stores">門市據點</NavLink>
             </li>
             <li>
               <NavLink>部落格</NavLink>

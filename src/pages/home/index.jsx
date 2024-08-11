@@ -17,8 +17,6 @@ import {
   Client4Png,
 } from "assets-images/clients";
 
-const { BASE_URL } = import.meta.env;
-
 export default function Home() {
   const fetcher = useFetcher();
 
@@ -31,7 +29,7 @@ export default function Home() {
           </h1>
           <em className="fw-bold">看得清，才能看得遠</em>
           <NavLink
-            to={`${BASE_URL}products/optical`}
+            to="/products/optical"
             className="bg-primary-400 mx-start-auto fz-400 fw-medium">
             立即購買
           </NavLink>
@@ -86,7 +84,7 @@ export default function Home() {
         </h3>
         <ul className="d-flex font-roboto">
           <li>
-            <NavLink to={`${BASE_URL}products/optical`}>
+            <NavLink to="/products/optical">
               <img src={ModelBlackWhitePng1} alt="optical" />
               <h4 className="clr-primary-400 fz-600 bg-neutral-100 py-2 text-align-center font-style-italic">
                 OPTICAL
@@ -94,7 +92,7 @@ export default function Home() {
             </NavLink>
           </li>
           <li>
-            <NavLink to={`${BASE_URL}products/sunglasses`}>
+            <NavLink to="/products/sunglasses">
               <img src={ModelBlackWhitePng2} alt="sunglasses" />
               <h4 className="clr-primary-400 fz-600 bg-neutral-100 py-2 text-align-center font-style-italic">
                 SUNGLASSES
@@ -102,7 +100,7 @@ export default function Home() {
             </NavLink>
           </li>
           <li>
-            <NavLink to={`${BASE_URL}products/functional`}>
+            <NavLink to="/products/functional">
               <img src={ModelBlackWhitePng3} alt="functional" />
               <h4 className="clr-primary-400 fz-600 bg-neutral-100 py-2 text-align-center font-style-italic">
                 FUNCTIONAL
@@ -118,7 +116,7 @@ export default function Home() {
           </h3>
           <ul className="d-flex font-roboto">
             <li>
-              <NavLink to={`${BASE_URL}products/double-a`}>
+              <NavLink to="/products/double-a">
                 <img
                   srcSet={`${ModelAlliancePngSM} 696w, ${ModelAlliancePng} 1296w`}
                   sizes="(max-width: 600px) 696px, 1296px"
@@ -131,7 +129,7 @@ export default function Home() {
               </NavLink>
             </li>
             <li>
-              <NavLink to={`${BASE_URL}products/youth`}>
+              <NavLink to="/products/youth">
                 <img
                   srcSet={`${ProductAlliancePngSM} 696w, ${ProductAlliancePng} 1296w`}
                   sizes="(max-width: 600px) 696px, 1296px"

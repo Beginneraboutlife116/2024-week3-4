@@ -4,25 +4,27 @@ export default function Pagination() {
   return (
     <ul className="pagination">
       <li>
-        <NavLink>上一頁</NavLink>
+        <NavLink to="/">上一頁</NavLink>
       </li>
       <li>
-        <NavLink>1</NavLink>
+        <NavLink to="/">1</NavLink>
       </li>
       <li>
-        <NavLink className="active">2</NavLink>
+        <NavLink className="active" to="/">
+          2
+        </NavLink>
       </li>
       <li>
-        <NavLink>3</NavLink>
+        <NavLink to="/">3</NavLink>
       </li>
       <li>
-        <NavLink>4</NavLink>
+        <NavLink to="/">4</NavLink>
       </li>
       <li>
-        <NavLink>5</NavLink>
+        <NavLink to="/">5</NavLink>
       </li>
       <li>
-        <NavLink>下一頁</NavLink>
+        <NavLink to="/">下一頁</NavLink>
       </li>
     </ul>
   );
