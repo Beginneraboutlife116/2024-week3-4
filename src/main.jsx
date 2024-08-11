@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "normalize.css";
 import "./assets/sass/main.scss";
 
@@ -17,7 +17,7 @@ import { loader as storeLoader } from "./pages/stores/store/utils";
 
 const { BASE_URL } = import.meta.env;
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -53,10 +53,6 @@ const router = createBrowserRouter(
               ],
             },
           ],
-        },
-        {
-          path: "*",
-          errorElement: <ErrorPage />,
         },
       ],
     },
