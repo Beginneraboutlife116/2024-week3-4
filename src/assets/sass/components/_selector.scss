@@ -1,0 +1,47 @@
+@use "sass:color";
+@use "../abstracts/" as *;
+
+.selector {
+  display: flex;
+  align-items: center;
+  margin-block: rem(24);
+
+  @include mq-for-above("mobile") {
+    margin-block: rem(32) rem(40);
+  }
+
+  label {
+    flex-shrink: 0;
+    margin-inline-end: rem(16);
+
+    @include mq-for-above("mobile") {
+      font-size: rem(24);
+    }
+  }
+
+  select {
+    inline-size: 100%;
+    background-color: clr(neutral, 100);
+    color: color.adjust(clr(neutral, 850), $alpha: -0.2);
+    padding: rem(6) rem(12);
+    border: 1px solid clr(neutral, 350);
+    appearance: none;
+    cursor: pointer;
+    font-size: rem(18);
+  }
+
+  &-wrapper {
+    position: relative;
+    inline-size: min(rem(304), 100%);
+
+    &::after {
+      content: url("assets/images/icons/arrow-down.svg");
+      position: absolute;
+      inline-size: rem(24);
+      block-size: rem(24);
+      inset: 50% 0 auto auto;
+      translate: -50% -50%;
+      pointer-events: none;
+    }
+  }
+}
