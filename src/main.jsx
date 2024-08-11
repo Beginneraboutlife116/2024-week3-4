@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import "normalize.css";
 import "./assets/sass/main.scss";
 
@@ -17,7 +21,7 @@ import { loader as storeLoader } from "./pages/stores/store/utils";
 
 const { BASE_URL } = import.meta.env;
 
-const router = createHashRouter(
+const router = createBrowserRouter(
   [
     {
       path: "/",
@@ -53,6 +57,10 @@ const router = createHashRouter(
               ],
             },
           ],
+        },
+        {
+          path: "*",
+          element: <Navigate to="/" replace />,
         },
       ],
     },
