@@ -17,7 +17,6 @@ import { loader as storeLoader } from "./pages/stores/store/utils";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
