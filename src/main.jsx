@@ -8,10 +8,12 @@ import ErrorPage from "./pages/error-page";
 import Layout from "./layout";
 import Home from "./pages/home";
 import Products from "./pages/products";
-import Locations from "./pages/locations";
+import StoresLayout from "./layout/stores";
+import Stores, { Store } from "./pages/stores";
 
 import { loader as productsLoader } from "./pages/products/utils";
-import { loader as locationsLoader } from "./pages/locations/utils";
+import { loader as storesLoader } from "./pages/stores/utils";
+import { loader as storeLoader } from "./pages/stores/store/utils";
 
 const router = createBrowserRouter([
   {
@@ -32,13 +34,20 @@ const router = createBrowserRouter([
             loader: productsLoader,
           },
           {
-            path: "/locations",
-            element: <Locations />,
-            loader: locationsLoader,
-          },
-          {
-            path: "/locations/:locationId",
-            element: <div>Hi</div>,
+            path: "/stores",
+            element: <StoresLayout />,
+            children: [
+              {
+                index: true,
+                element: <Stores />,
+                loader: storesLoader,
+              },
+              {
+                path: ":storeId",
+                element: <Store />,
+                loader: storeLoader,
+              },
+            ],
           },
         ],
       },

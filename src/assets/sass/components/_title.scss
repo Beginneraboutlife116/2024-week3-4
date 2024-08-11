@@ -6,4 +6,16 @@
   @include mq-for-below("mobile") {
     font-size: rem(24);
   }
+
+  &--decorate {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inline-size: rem(8);
+      background-color: clr(primary, 500);
+      inset: 0 auto 0 rem(-4);
+    }
+  }
 }

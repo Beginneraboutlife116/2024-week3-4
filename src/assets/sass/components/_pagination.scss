@@ -5,9 +5,13 @@
   inline-size: fit-content;
   margin-inline: auto;
 
+  > :not(:first-child) a {
+    border-inline-start: none;
+  }
+
   a {
     display: inline-block;
-    min-inline-size: rem(42);
+    min-inline-size: rem(40);
     padding: rem(12);
     border: 1px solid clr(neutral, 600);
     text-align: center;

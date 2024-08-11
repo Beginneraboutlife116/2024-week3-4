@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../abstracts/" as *;
 
 .card {
@@ -5,4 +6,30 @@
 
   max-inline-size: var(--card-max-inline-size, auto);
   min-block-size: var(--card-min-block-size);
+
+  &--store {
+    --card-min-block-size: #{rem(516)};
+
+    @include mq-for-above("mobile") {
+      --card-max-inline-size: #{rem(336)};
+    }
+
+    @include mq-for-above("tablet") {
+      --card-max-inline-size: #{rem(416)};
+    }
+
+    h3 {
+      border: 1px solid color.adjust(clr(neutral, 900), $alpha: -0.875);
+    }
+
+    .card__content {
+      border: 1px solid color.adjust(clr(neutral, 900), $alpha: -0.875);
+
+      img {
+        inline-size: rem(24);
+        margin-inline-end: rem(8);
+        margin-block-start: rem(3);
+      }
+    }
+  }
 }

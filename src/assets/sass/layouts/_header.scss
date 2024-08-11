@@ -54,7 +54,7 @@
       li {
         inline-size: 50%;
 
-        & + li {
+        + li {
           margin-inline-start: 0;
         }
 
