@@ -22,7 +22,7 @@ export default function Header() {
               <NavLink to="/products/optical">系列鏡框</NavLink>
             </li>
             <li>
-              <NavLink to="/locations">門市據點</NavLink>
+              <NavLink to="/stores">門市據點</NavLink>
             </li>
             <li>
               <NavLink>部落格</NavLink>
