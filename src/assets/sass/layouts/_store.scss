@@ -18,27 +18,17 @@
     }
   }
 
-  &__map-wrapper {
-    position: relative;
-
-    &.loading::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: color.adjust(clr(neutral, 900), $alpha: -0.875);
-    }
-  }
-
   .card {
-    --card-min-block-size: #{rem(424)};
+    --card-min-block-size: #{rem(414)};
     --card-max-inline-size: #{rem(526)};
 
     display: flex;
     flex-direction: column;
+    inline-size: 100%;
 
     @include mq-for-below("tablet") {
-      --card-max-inline-size: none;
       --card-min-block-size: #{rem(224)};
+      --card-max-inline-size: none;
 
       flex-direction: row;
 
@@ -62,6 +52,12 @@
         + * {
           margin-inline-start: rem(0);
         }
+      }
+    }
+
+    &--store {
+      > img {
+        block-size: rem(224);
       }
     }
   }

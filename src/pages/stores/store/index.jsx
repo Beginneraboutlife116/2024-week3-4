@@ -58,17 +58,15 @@ export default function Store() {
             </div>
           </div>
         </div>
-        <div className="store__map-wrapper">
-          <iframe
-            className="border-none | store__map"
-            title="Google Maps"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps/embed/v1/place?key=${
-              import.meta.env.VITE_GOOGLE_MAPS_API_KEY
-            }&q=${address}`}
-          />
-        </div>
+        <iframe
+          className="border-none | store__map"
+          title="Google Maps"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+          src={`https://www.google.com/maps/embed/v1/place?key=${
+            import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+          }&q=${address}`}
+        />
       </div>
     </div>
   );
