@@ -15,8 +15,11 @@ import { loader as productsLoader } from "./pages/products/utils";
 import { loader as storesLoader } from "./pages/stores/utils";
 import { loader as storeLoader } from "./pages/stores/store/utils";
 
+const { BASE_URL } = import.meta.env;
+
 const router = createBrowserRouter([
   {
+    path: BASE_URL,
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
@@ -28,12 +31,12 @@ const router = createBrowserRouter([
             element: <Home />,
           },
           {
-            path: "/products/:category",
+            path: `${BASE_URL}products/:category`,
             element: <Products />,
             loader: productsLoader,
           },
           {
-            path: "/stores",
+            path: `${BASE_URL}stores`,
             element: <StoresLayout />,
             children: [
               {

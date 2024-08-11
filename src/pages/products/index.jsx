@@ -4,6 +4,8 @@ import Pagination from "../../components/pagination";
 
 import { images, convertToLocalePrice } from "./utils";
 
+const { BASE_URL } = import.meta.env;
+
 export default function Products() {
   const { category } = useParams();
   const { mainSentence, products } = useLoaderData();
@@ -16,21 +18,21 @@ export default function Products() {
           <ul className="d-flex">
             <li className="w-100">
               <NavLink
-                to="/products/optical"
+                to={`${BASE_URL}products/optical`}
                 className="clr-neutral-900 font-roboto fw-medium text-align-center">
                 OPTICAL
               </NavLink>
             </li>
             <li className="w-100">
               <NavLink
-                to="/products/sunglasses"
+                to={`${BASE_URL}products/sunglasses`}
                 className="clr-neutral-900 font-roboto fw-medium text-align-center">
                 SUNGLASSES
               </NavLink>
             </li>
             <li className="w-100">
               <NavLink
-                to="/products/functional"
+                to={`${BASE_URL}products/functional`}
                 className="clr-neutral-900 font-roboto fw-medium text-align-center">
                 FUNCTIONAL
               </NavLink>
@@ -49,21 +51,21 @@ export default function Products() {
           <ul className="d-flex">
             <li className="w-100">
               <NavLink
-                to="/products/optical"
+                to={`${BASE_URL}products/optical`}
                 className="clr-neutral-900 font-roboto fw-medium text-align-center">
                 OPTICAL
               </NavLink>
             </li>
             <li className="w-100">
               <NavLink
-                to="/products/sunglasses"
+                to={`${BASE_URL}products/sunglasses`}
                 className="clr-neutral-900 font-roboto fw-medium text-align-center">
                 SUNGLASSES
               </NavLink>
             </li>
             <li className="w-100">
               <NavLink
-                to="/products/functional"
+                to={`${BASE_URL}products/functional`}
                 className="clr-neutral-900 font-roboto fw-medium text-align-center">
                 FUNCTIONAL
               </NavLink>

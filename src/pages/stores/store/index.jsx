@@ -8,6 +8,8 @@ import {
   LocationSvg,
 } from "../../../assets/images/icons";
 
+const { BASE_URL } = import.meta.env;
+
 export default function Store() {
   const navigate = useNavigate();
   const { storeId } = useParams();
@@ -22,7 +24,7 @@ export default function Store() {
     const { value } = e.target;
 
     if (storeId !== value) {
-      navigate(`/stores/${value}`);
+      navigate(`${BASE_URL}stores/${value}`);
     }
   };
 
