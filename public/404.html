@@ -31,9 +31,13 @@
       const { location } = window;
       const newURL =
         "https://beginneraboutlife116.github.io/2024-week3-4/?/" +
-        location.pathname.split("/").slice(2).join("/");
+        location.pathname.split("/").slice(2).join("/") +
+        (location.search
+          ? "&" + location.search.slice(1).replace(/&/g, "~and~")
+          : "") +
+        location.hash;
 
-      window.location.replace(newURL);
+      location.replace(newURL);
     </script>
   </head>
   <body></body>
